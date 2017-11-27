@@ -1,0 +1,33 @@
+@tivoli-yellow: rgb(255,238,0);
+
+#container {
+    background-color: rgb(181, 247, 185);
+    display: flex;
+    width: 500px;
+    margin: 0 auto;
+    border: 25px dotted @tivoli-yellow;  
+
+}
+
+#moviePoster {
+    display: flex;
+    flex-direction: column;
+}
+
+#movieReview {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rating span{
+    color: grey;
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+}
+
+.rating .filled{
+    color: @tivoli-yellow;
+
+}

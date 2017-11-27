@@ -1,11 +1,37 @@
+var title = $("#title");
+
 function renderMovie (movieData) {
-    document.getElementById("title").innerText = movieData.title;
-    document.getElementById("summary").innerText = movieData.summary;
+    $("#title").text(movieData.title);
+    $("#summary").text(movieData.summary);
+    //$("#actors").html("<li>" + movieData.actors + "</li>");
+    
     var actors = '';
     for(var i = 0; i < movieData.actors.length; i++) {
         actors += "<li>" + movieData.actors[i] + "</li>";
     }
-    document.getElementById("actors").innerHTML = actors;
+    $("#actors").html(actors);
 
 }
-renderMovie(movieData);
+
+function changeRating(grade) {
+    
+    for(let i = 1; i<=5; i++){
+        if($("#heart"+i).hasClass("filled")){
+            $("#heart"+i).attr("class", "na");
+        }
+    }
+    
+    for(let i = 1; i<=grade; i++) {
+        console.log("heart"+i, grade)
+        $("#heart"+i).addClass("filled"); 
+    }
+}
+
+for(let i = 1; i <6; i++){
+    let heart = $("#heart"+i);
+    heart.on("click", function(){
+        changeRating(i)}
+    )};
+    renderMovie(movieData);
+
+//changeRating(3);
