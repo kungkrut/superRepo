@@ -9,7 +9,8 @@
     "copyIndex": "cp index.html distribution/index.html",
     "build": "npm run bundle && npm run styles && npm run copyIndex",
     "lintless": "stylelint stylesheet.less",
-    "lintjs": "eslint ."
+    "lintjs": "eslint .",
+    "lint": "stylelint stylesheet.less && eslint ."
   },
   "repository": {
     "type": "git",
