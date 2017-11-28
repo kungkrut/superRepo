@@ -4,7 +4,12 @@
   "description": "webapp for moviereviews",
   "main": "code.js",
   "scripts": {
-    "styles": "lessc stylesheet.less stylesheet.css"
+    "styles": "lessc stylesheet.less distribution/stylesheet.css",
+    "bundle": "webpack",
+    "copyIndex": "cp index.html distribution/index.html",
+    "build": "npm run bundle && npm run styles && npm run copyIndex",
+    "lintless": "stylelint stylesheet.less",
+    "lintjs": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -20,6 +25,9 @@
     "jquery": "^3.2.1"
   },
   "devDependencies": {
-    "less": "^2.7.3"
+    "eslint": "^4.12.0",
+    "less": "^2.7.3",
+    "stylelint": "^8.3.1",
+    "webpack": "^3.8.1"
   }
 }

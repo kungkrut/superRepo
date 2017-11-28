@@ -1,11 +1,12 @@
-var title = $("#title");
+import {movieData} from "./data";
+import $ from "jquery";
 
 function renderMovie (movieData) {
     $("#title").text(movieData.title);
     $("#summary").text(movieData.summary);
     //$("#actors").html("<li>" + movieData.actors + "</li>");
     
-    var actors = '';
+    var actors = "";
     for(var i = 0; i < movieData.actors.length; i++) {
         actors += "<li>" + movieData.actors[i] + "</li>";
     }
