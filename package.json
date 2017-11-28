@@ -4,7 +4,7 @@
   "description": "webapp for moviereviews",
   "main": "code.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "styles": "lessc stylesheet.less stylesheet.css"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/kungkrut/superRepo#readme",
   "dependencies": {
     "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "less": "^2.7.3"
   }
 }
